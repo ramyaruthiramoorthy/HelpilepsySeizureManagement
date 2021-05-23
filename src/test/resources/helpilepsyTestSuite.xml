@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="HelpilepsyTestSuite" parallel="false">
+	<parameter name="browserType" value="chrome" />
+	<test name="HelpilepsyTestingOnChrome">
+		<classes>
+			<class name="com.hepilepsy.test.HepilepsyHomeTest" />
+			<class name="com.hepilepsy.test.HepilepsyLoginTest" />
+			<class name="com.hepilepsy.test.HepilepsyDashboardTest" />
+			<class name="com.hepilepsy.test.HepilepsyManageSeizureTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
