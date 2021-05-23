@@ -3,9 +3,9 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.helpilepsy.core.BaseTest;
-import com.helpilepsy.properties.FetchProperty;
 import com.hepilepsy.pages.HepilepsyHomePage;
 import com.hepilepsy.pages.HepilepsyLoginPage;
+import com.hepilepsy.properties.FetchProperty;
 
 /***
  * 

@@ -1,4 +1,4 @@
-package com.helpilepsy.properties;
+package com.hepilepsy.properties;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
