@@ -1,4 +1,4 @@
-package com.helpilepsy.core;
+package com.hepilepsy.core;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

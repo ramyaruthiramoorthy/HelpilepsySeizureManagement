@@ -1,7 +1,8 @@
 package com.hepilepsy.test;
 import java.io.IOException;
 import org.testng.annotations.Test;
-import com.helpilepsy.core.BaseTest;
+
+import com.hepilepsy.core.BaseTest;
 import com.hepilepsy.pages.HepilepsyDashboardPage;
 import com.hepilepsy.properties.FetchProperty;
 

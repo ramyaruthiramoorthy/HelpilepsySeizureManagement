@@ -1,4 +1,4 @@
-package com.helpilepsy.core;
+package com.hepilepsy.core;
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
