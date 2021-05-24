@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -21,8 +21,8 @@ public class BaseTest {
 	protected static WebDriver driver;
 	
 	@Parameters({ "browserType"})
-	@BeforeSuite
-	public void beforeSuite(String browserType) throws IOException {
+	@BeforeTest
+	public void beforeTest(String browserType) throws IOException {
 		
 		if(browserType.equalsIgnoreCase("Chrome"))
 		{
@@ -48,8 +48,8 @@ public class BaseTest {
 	/***
 	 * afterSuite function closes the driver and quit from the execution.
 	 */
-	@AfterSuite
-	public void afterSuite() {
+	@AfterTest
+	public void afterTest() {
 		if (driver != null) {
 			driver.close();
 			driver.quit();

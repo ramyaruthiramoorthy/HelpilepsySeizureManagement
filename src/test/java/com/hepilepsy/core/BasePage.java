@@ -1,5 +1,6 @@
 package com.hepilepsy.core;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -17,6 +18,7 @@ public class BasePage {
 	
     protected WebDriver driver;
     private WebDriverWait wait;
+    protected JavascriptExecutor executor;
 
     // poll for every ms
     private static final int POLLING = 1000;
@@ -26,6 +28,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        this.executor =  (JavascriptExecutor) driver;
         wait = new WebDriverWait(driver, LOADING_TIMEOUT, POLLING);
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, LOADING_TIMEOUT), this);
     }
@@ -42,6 +45,11 @@ public class BasePage {
     protected void waitForElementToDisappear(WebElement element) {
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
+    
+    protected void waitForElementToBeClickable(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+    
 
    /***
     * force wait to see the actions and navigations

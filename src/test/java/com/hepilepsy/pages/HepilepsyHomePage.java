@@ -39,7 +39,7 @@ public class HepilepsyHomePage extends BasePage {
     }
     
     public void clickSwapButton(){
-    	waitForElementToAppear(swipeBtn);
+    	waitForElementToBeClickable(swipeBtn);
     	swipeBtn.click();
     }
     
@@ -48,7 +48,7 @@ public class HepilepsyHomePage extends BasePage {
     }
     
     public void clickLetsGoButton(){
-    	waitForElementToAppear(letsGoBtn);
+    	waitForElementToBeClickable(swipeBtn);
     	letsGoBtn.click();
     }
     

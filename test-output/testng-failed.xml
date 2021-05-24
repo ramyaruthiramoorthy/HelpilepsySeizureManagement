@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [HelpilepsyTestSuite]">
-  <parameter name="browserType" value="chrome"/>
-  <test name="HelpilepsyTestingOnChrome(failed)">
+  <test name="HelpilepsyTestingOnFirefox(failed)">
+    <parameter name="browserType" value="firefox"/>
     <classes>
+      <class name="com.hepilepsy.test.HepilepsyDashboardTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="dashboardPageTests"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.hepilepsy.test.HepilepsyDashboardTest -->
       <class name="com.hepilepsy.test.HepilepsyManageSeizureTest">
         <methods>
           <include name="addSeizureTests"/>
-          <include name="afterSuite"/>
-          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
         </methods>
       </class> <!-- com.hepilepsy.test.HepilepsyManageSeizureTest -->
     </classes>
-  </test> <!-- HelpilepsyTestingOnChrome(failed) -->
+  </test> <!-- HelpilepsyTestingOnFirefox(failed) -->
 </suite> <!-- Failed suite [HelpilepsyTestSuite] -->

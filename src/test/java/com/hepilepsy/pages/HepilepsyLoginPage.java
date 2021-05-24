@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import com.hepilepsy.core.BasePage;
 
 /***
- * 
+ * class HepilepsyLoginPage implements functions related to login page.
  * @author Ramya
  *
  */
@@ -36,15 +36,15 @@ public class HepilepsyLoginPage extends BasePage {
     
     public void setUserPassword(String password){
         //set Password
-       	userPassword.sendKeys(password);
+       	userPassword.sendKeys(password);	
+    	// force wait to show users/testers what values are entered
+    	forceSleep(3000);
     }
     
     public HepilepsyDashboardPage clickLoginBtn(){
-    	forceSleep(3000);
     	logInBtn.click();
-    	forceSleep(3000);
+    	forceSleep(5000);
     	return new HepilepsyDashboardPage(driver);
-    	
     }
     
 }

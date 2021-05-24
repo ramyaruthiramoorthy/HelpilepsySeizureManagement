@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="HelpilepsyTestSuite" parallel="false">
-	<parameter name="browserType" value="chrome" />
+	
 	<test name="HelpilepsyTestingOnChrome">
+	<parameter name="browserType" value="chrome" />
 		<classes>
 			<class name="com.hepilepsy.test.HepilepsyHomeTest" />
 			<class name="com.hepilepsy.test.HepilepsyLoginTest" />
 			<class name="com.hepilepsy.test.HepilepsyDashboardTest" />
 			<class name="com.hepilepsy.test.HepilepsyManageSeizureTest" />
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test> 
+
+<!--
+	<test name="HelpilepsyTestingOnChrome">
+	<parameter name="browserType" value="edge" />
+		<classes>
+			<class name="com.hepilepsy.test.HepilepsyHomeTest" />
+			<class name="com.hepilepsy.test.HepilepsyLoginTest" />
+			<class name="com.hepilepsy.test.HepilepsyDashboardTest" />
+			<class name="com.hepilepsy.test.HepilepsyManageSeizureTest" />
+		</classes>
+	</test> 
+ 
+	<test name="HelpilepsyTestingOnFirefox">
+	<parameter name="browserType" value="firefox" />
+		<classes>
+			<class name="com.hepilepsy.test.HepilepsyHomeTest" />
+			<class name="com.hepilepsy.test.HepilepsyLoginTest" />
+			<class name="com.hepilepsy.test.HepilepsyDashboardTest" />
+			<class name="com.hepilepsy.test.HepilepsyManageSeizureTest" />
+		</classes>
+	</test> 
+ -->
+</suite> 
