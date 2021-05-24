@@ -36,9 +36,9 @@ public class HepilepsyManageSeizureTest extends BaseTest {
 		
 		//Go back to journal page to Add Seizure again as save button is disabled(Seems to be bug)
 		manageSeizurePage.clickBackBtn();
-		manageSeizurePage.clickWarningConfirmBtn();
-		manageSeizurePage.clickAddBtn();
-		manageSeizurePage.clickSeizureEventBtn();
+		HepilepsyDashboardPage dashboardPage = manageSeizurePage.clickWarningConfirmBtn();
+		dashboardPage.clickAddBtn();
+		dashboardPage.clickSeizureEventBtn();
 		
 		manageSeizurePage.selectType();
 		manageSeizurePage.selectTypeOption();
@@ -46,7 +46,7 @@ public class HepilepsyManageSeizureTest extends BaseTest {
 		manageSeizurePage.saveSeizer();
 		Assert.assertEquals(manageSeizurePage.infoMessageValidation(), saveMessage);
 		
-		HepilepsyDashboardPage dashboardPage = manageSeizurePage.clickOkBtn();
+		dashboardPage = manageSeizurePage.clickOkBtn();
     	Assert.assertEquals(dashboardPage.getPageUrl(), dashboardPageUrl);
     	
     	HepilepsyJournalPage journalPage = dashboardPage.clickDayBtn();

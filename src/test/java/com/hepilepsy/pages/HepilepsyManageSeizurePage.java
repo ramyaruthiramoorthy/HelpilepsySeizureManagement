@@ -33,13 +33,7 @@ public class HepilepsyManageSeizurePage extends BasePage {
 	private WebElement backBtn;
 	@FindBy(xpath = "//span[text()='Confirm']")
 	private WebElement confirmBtn;
-    
-	//Add seizure Element
-	@FindBy(xpath = "//div[text()='Add']")
-	private WebElement addBtn;
-	@FindBy(xpath = "//div[text()='Seizure']")
-	private WebElement seizerEventBtn;
-	
+
 	//Info box
 	@FindBy(xpath = "//div[@class='info']")
 	private WebElement infoBox;
@@ -101,21 +95,12 @@ public class HepilepsyManageSeizurePage extends BasePage {
     	forceSleep(3000);
 	}
 	
-	public void clickWarningConfirmBtn() {
+	public HepilepsyDashboardPage clickWarningConfirmBtn() {
     	executor.executeScript("arguments[0].click();", confirmBtn);
     	forceSleep(3000);
+    	return new HepilepsyDashboardPage(driver);
 	}
 	
-    public void clickAddBtn(){
-    	addBtn.click();
-    	forceSleep(3000);
-    }
-    
-    public void clickSeizureEventBtn(){
-	  	executor.executeScript("arguments[0].click();", seizerEventBtn);
-	  	forceSleep(3000);
-  }
-
 	public void saveSeizer() {
 		executor.executeScript("arguments[0].scrollIntoView();", saveSeizerBtn);
 		forceSleep(3000);
